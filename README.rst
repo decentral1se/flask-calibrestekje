@@ -34,9 +34,15 @@ Library prototyping based on Calibre with Flask
 Example
 *******
 
+app.cfg
+=======
+
 .. code-block:: cfg
 
     CALIBRESTEKJE_SQLITE_URL = "sqlite:///mymetadata.db"
+
+app.py
+======
 
 .. code-block:: python
 
@@ -52,6 +58,14 @@ Example
     @app.route("/")
     def home():
         return jsonify({"book-count": db.session.query(Book).count()})
+
+command-line
+============
+
+.. code-block:: bash
+
+    $ export FLASK_APP=app.py
+    $ flask run
 
 .. _documentation:
 
