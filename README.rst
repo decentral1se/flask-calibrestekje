@@ -34,6 +34,10 @@ Library prototyping based on Calibre with Flask
 Example
 *******
 
+.. code-block:: cfg
+
+    CALIBRESTEKJE_SQLITE_URL = "sqlite:///mymetadata.db"
+
 .. code-block:: python
 
     from calibrestekje import Book
@@ -42,7 +46,7 @@ Example
     from flask_calibrestekje import CalibreStekje
 
     app = Flask(__name__)
-    app.config.from_pyfile("config.cfg")
+    app.config.from_pyfile("app.cfg")
     db = CalibreStekje(app)
 
     @app.route("/")
