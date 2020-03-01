@@ -1,5 +1,7 @@
 """flask-calibrestekje module."""
 
+from flask_calibrestekje.flask_calibrestekje import CalibreStekje  # noqa
+
 try:
     import pkg_resources
 except ImportError:
