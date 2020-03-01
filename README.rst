@@ -1,8 +1,8 @@
 .. _header:
 
-************************
+*******************
 flask-calibrestekje
-************************
+*******************
 
 .. image:: https://img.shields.io/badge/license-GPL-brightgreen.svg
    :target: LICENSE
@@ -16,8 +16,8 @@ flask-calibrestekje
    :target: https://travis-ci.com/decentral1se/flask-calibrestekje
    :alt: Travis CI result
 
-.. image:: https://readthedocs.org/projects/flask-calibrestekje/badge/?version=latest
-   :target: https://flask-calibrestekje.readthedocs.io/en/latest/
+.. image:: https://readthedocs.org/projects/calibrestekje/badge/?version=latest
+   :target: https://calibrestekje.readthedocs.io/en/latest/
    :alt: Documentation status
 
 .. image:: http://img.shields.io/liberapay/patrons/decentral1se.svg?logo=liberapay
@@ -27,7 +27,7 @@ flask-calibrestekje
 .. _introduction:
 
 Library prototyping based on Calibre with Flask
-------------------------------------
+-----------------------------------------------
 
 .. _example:
 
@@ -36,11 +36,22 @@ Example
 
 .. code-block:: python
 
-    # TODO
+    from calibrestekje import Book
+    from flask import Flask, jsonify
+
+    from flask_calibrestekje import CalibreStekje
+
+    app = Flask(__name__)
+    app.config.from_pyfile("config.cfg")
+    db = CalibreStekje(app)
+
+    @app.route("/")
+    def home():
+        return jsonify({"book-count": db.session.query(Book).count()})
 
 .. _documentation:
 
 Documentation
 *************
 
-* https://flask-calibrestekje.readthedocs.io/
+* https://calibrestekje.readthedocs.io/
