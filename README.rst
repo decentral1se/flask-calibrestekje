@@ -55,3 +55,10 @@ Documentation
 *************
 
 * https://calibrestekje.readthedocs.io/
+
+Mirroring
+*********
+
+* `hack.decentral1.se/decentral1se/flask-calibrestekje`_
+
+.. _hack.decentral1.se/decentral1se/flask-calibrestekje: https://hack.decentral1.se/decentral1se/flask-calibrestekje/
