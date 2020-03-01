@@ -14,8 +14,8 @@ include = '\.pyi?$'
 [tool.towncrier]
 directory = "changelog/"
 filename = "CHANGELOG.rst"
-package = "flask-calibrestekje"
-package_dir = "flask-calibrestekje"
+package = "flask_calibrestekje"
+package_dir = "flask_calibrestekje"
 
   [[tool.towncrier.type]]
   directory = "removal"

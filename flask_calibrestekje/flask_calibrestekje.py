@@ -1,5 +1,5 @@
 from calibrestekje import init_session
-from flask import _app_ctx_stack, current_app
+from flask import _app_ctx_stack, current_app  # type: ignore
 
 
 class CalibreStekje(object):

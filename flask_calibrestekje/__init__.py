@@ -9,6 +9,6 @@ except ImportError:
 
 
 try:
-    __version__ = pkg_resources.get_distribution('flask-calibrestekje').version
+    __version__ = pkg_resources.get_distribution("flask-calibrestekje").version
 except Exception:
-    __version__ = 'unknown'
+    __version__ = "unknown"
